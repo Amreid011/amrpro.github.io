@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      @import url("https://fonts.googleapis.com/css?family=Oswald:400,700");
+
+      :root {
+        --level-one: translateZ(3rem);
+        --level-two: translateZ(6rem);
+        --level-three: translateZ(9rem);
+
+        --fw-normal: 400;
+        --fw-bold: 700;
+
+        --clr: #b7c9e5;
+      }
+
+      *,
+      *::before,
+      *::after {
+        box-sizing: border-box;
+        margin: 0;
+      }
+
+      body {
+        height: 100vh;
+        display: grid;
+        place-items: center;
+        font-family: "Oswald", sans-serif;
+        background-color: #333;
+      }
+
+      .card {
+        width: 350px;
+        padding-left: 50px;
+      }
+
+      .card__content {
+        text-align: center;
+        position: relative;
+        padding: 15em 5em;
+        transition: transform 3s;
+        background: pink;
+        transform-style: preserve-3d;
+      }
+
+      .card:hover .card__content {
+        transform: rotateY(0.5turn);
+      }
+
+      .card__front,
+      .card__back {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        padding: 5em 3em;
+        backface-visibility: hidden;
+        transform-style: preserve-3d;
+        display: grid;
+        align-content: center;
+      }
+
+      .card__front {
+        background-color: var(--clr);
+        background-image: url(../images/3_amr\ eid.jpg);
+        background-size: cover;
+        background-blend-mode: overlay;
+        color: #333;
+      }
+
+      .card__front::before {
+        content: "";
+        position: absolute;
+        --spacer: 1em;
+        top: var(--spacer);
+        bottom: var(--spacer);
+        left: var(--spacer);
+        right: var(--spacer);
+        border: 3px solid currentColor;
+        transform: var(--level-one);
+      }
+
+      .card__title {
+        font-size: 3.5rem;
+        transform: var(--level-three);
+        order: 2;
+        text-transform: uppercase;
+      }
+
+      .card__subtitle {
+        transform: var(--level-two);
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        font-size: 0.75rem;
+        font-weight: var(--fw-bold);
+        opacity: 0.7;
+      }
+
+      .card__body {
+        transform: var(--level-two);
+        font-weight: var(fw-normal);
+        font-size: 1.5rem;
+        line-height: 1.6;
+      }
+
+      .card__back {
+        transform: rotateY(0.5turn);
+        color: var(--clr);
+        background: rgb(184, 177, 79);
+      }
+      .row111 {
+        display: flex;
+        justify-content: center;
+      }
+    </style>
+  </head>
+  <body>
+    <br /><br /><br />
+    <!-- row1 -->
+    <section class="row111">
+      <div class="card">
+        <div class="card__content">
+          <div
+            class="card__front"
+            style="background-image: url(../images/3_amr\ mohamed.jpg)"
+          >
+            <h3 class="card__title">Amr mohamed</h3>
+            <p class="card__subtitle">the leader</p>
+          </div>
+
+          <div class="card__back">
+            <p class="card__body">
+              Created pages:<br /><br />
+              1 - <a href="#">home page</a><br />
+              2 - <a href="#">actors</a><br />
+              3 - <a href="#">contact us</a><br />
+              4 - <a href="#">lyout of second page</a><br />
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card__content" style="margin-top: 25%">
+          <div
+            class="card__front"
+            style="background-image: url(../images/3_amr\ eid.jpg)"
+          >
+            <h3 class="card__title">Amr Eid</h3>
+            <p class="card__subtitle">vice head</p>
+          </div>
+
+          <div class="card__back">
+            <p class="card__body">
+              Created pages:<br /><br />
+              1 - <a href="#">World Leaders</a><br />
+              2 - <a href="#">Freelancers</a><br />
+              3 - <a href="#">about us</a><br />
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <br /><br /><br />
+
+    <!-- row2 -->
+    <section class="row111">
+      <div class="card">
+        <div class="card__content">
+          <div
+            class="card__front"
+            style="background-image: url(../images/3_amr\ yaseer.jpg)"
+          >
+            <h3 class="card__title">amr yaseer</h3>
+            <p class="card__subtitle">supervisor</p>
+          </div>
+
+          <div class="card__back">
+            <p class="card__body">
+              Created pages:<br /><br />
+              1 - <a href="#">Entrepreneurs</a><br />
+              2 - <a href="#">World Records</a><br />
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card__content" style="margin-top: 25%">
+          <div
+            class="card__front"
+            style="background-image: url(../images/3_fares\ ashraf.jpg)"
+          >
+            <h3 class="card__title">Fares Ashraf</h3>
+            <p class="card__subtitle">member</p>
+          </div>
+
+          <div class="card__back">
+            <p class="card__body">
+              Created pages:<br /><br />
+              1 - <a href="#">Athelets</a><br />
+              2 - <a href="#">Scientists</a><br />
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card__content" style="margin-top: 50%">
+          <div
+            class="card__front"
+            style="background-image: url(../images/3_eid\ gmal.jpg)"
+          >
+            <h3 class="card__title">Eid Gmal</h3>
+            <p class="card__subtitle">member</p>
+          </div>
+
+          <div class="card__back">
+            <p class="card__body">
+              Created pages:<br /><br />
+              1 - <a href="#">Rich people</a><br />
+              2 - <a href="#">Motivational Speakers</a><br />
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <br /><br /><br />
+
+    <!-- row3 -->
+    <section class="row111">
+      <div class="card">
+        <div class="card__content">
+          <div
+            class="card__front"
+            style="background-image: url(../images/3_omar\ gaber.jpg)"
+          >
+            <h3 class="card__title">omar Gaber</h3>
+            <p class="card__subtitle">member</p>
+          </div>
+
+          <div class="card__back">
+            <p class="card__body">
+              Created pages:<br /><br />
+              1 - <a href="#">Singers</a><br />
+              2 - <a href="#">Influencers</a><br />
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card__content" style="margin-top: 25%">
+          <div
+            class="card__front"
+            style="background-image: url(../images/3_fares\ adly.jpg)"
+          >
+            <h3 class="card__title">Fares Adly</h3>
+            <p class="card__subtitle">member</p>
+          </div>
+
+          <div class="card__back">
+            <p class="card__body">
+              Created pages:<br /><br />
+              1 - <a href="#">Writers</a><br />
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card__content" style="margin-top: 50%">
+          <div
+            class="card__front"
+            style="background-image: url(../images/3_amr\ waeel.jpg)"
+          >
+            <h3 class="card__title">Amr wael</h3>
+            <p class="card__subtitle">member</p>
+          </div>
+
+          <div class="card__back">
+            <p class="card__body">
+              Created pages:<br /><br />
+              1 - <a href="#">Explorers</a><br />
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <br /><br /><br />.
+  </body>
+</html>
